@@ -10,7 +10,6 @@ import SwiftUI
 struct ContentView: View {
     @State private var weight = ""
     @State private var height = ""
-    @FocusState private var isFocused: Bool = false
     
     var body: some View {
         VStack {
@@ -21,7 +20,6 @@ struct ContentView: View {
                             .font(.headline)
                         TextField("kilogram", text: $weight)
                             .multilineTextAlignment(.trailing)
-                            .focused(isFocused)
                     }
                     HStack {
                         Text("Height")
